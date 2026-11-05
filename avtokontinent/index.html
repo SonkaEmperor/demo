@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Автоконтинент — автосервис по ремонту автомобилей и продаже запчастей, Тюмень</title>
+<meta name="description" content="Автоконтинент: автосервис по ремонту автомобилей и продаже запчастей в Тюмени, улица Мельникайте, 8а. Ежедневно 9:00–20:00. Телефон +7 (3452) 66-66-00.">
+<style>
+:root { --accent: #ff6a1a; --bg: #14161a; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.1); --text: #f2f2f2; --muted: #a3a7ad; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: 76px; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.logo { font-weight: 900; letter-spacing: -.01em; font-size: 18px; text-decoration: none; }
+.logo i { color: var(--accent); font-style: normal; }
+.top .phone-top { font-weight: 700; text-decoration: none; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 35%, var(--bg) 94%); }
+body.no-photo .hero { min-height: 72vh; background: radial-gradient(120% 90% at 85% 0%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 60%), repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 14px, transparent 14px 28px); }
+.hero .wrap { position: relative; z-index: 1; padding-top: 96px; padding-bottom: 48px; width: 100%; }
+.tag { display: inline-block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 12px; }
+h1 { font-size: clamp(44px, 10vw, 96px); line-height: .95; margin: 0 0 16px; font-weight: 900; letter-spacing: -.02em; }
+.lead { font-size: clamp(17px, 2.2vw, 20px); color: #e2e4e7; max-width: 640px; margin: 0 0 20px; }
+.rating { display: inline-flex; gap: 8px; align-items: center; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; margin-bottom: 24px; text-decoration: none; backdrop-filter: blur(6px); }
+.rating b { color: var(--accent); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 800; text-decoration: none; }
+.btn.ghost { background: rgba(0,0,0,.25); color: var(--text); border: 1px solid var(--line); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: -8px; position: relative; z-index: 1; }
+.stats div { background: var(--bg); padding: 20px 18px; }
+.stats b { display: block; font-size: clamp(24px, 4vw, 34px); line-height: 1.1; font-weight: 900; color: var(--accent); }
+.stats span { color: var(--muted); font-size: 14px; }
+section { padding: 72px 0 8px; }
+.kicker { color: var(--accent); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; margin: 0 0 8px; }
+h2 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 0 0 24px; letter-spacing: -.01em; }
+.why { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 999px; padding: 7px 14px; font-weight: 600; font-size: 15px; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.perks li { padding-left: 30px; position: relative; }
+.perks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #111; font-size: 12px; font-weight: 900; display: grid; place-items: center; margin-top: 2px; }
+.featured { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; position: relative; }
+.featured blockquote { margin: 0 0 14px; font-size: 18px; line-height: 1.5; }
+.featured::before { content: "“"; position: absolute; top: -18px; left: 20px; font-size: 80px; line-height: 1; color: var(--accent); font-family: Georgia, serif; }
+.services { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.services li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; }
+.services .num { color: var(--accent); font-weight: 900; font-size: 13px; letter-spacing: .05em; }
+.services h3 { font-size: 18px; margin: 4px 0 6px; line-height: 1.25; }
+.services p { margin: 0; color: var(--muted); font-size: 15px; }
+.services p.detail { color: var(--text); margin-bottom: 6px; }
+.price { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+.price p { margin: 0 0 14px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 900; display: grid; place-items: center; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 15px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; aspect-ratio: 656/340; object-fit: cover; border-radius: 12px; display: block; }
+.reviews { columns: 3 280px; column-gap: 14px; }
+.review { break-inside: avoid; margin: 0 0 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.review blockquote { margin: 0 0 12px; }
+.review figcaption, .featured figcaption, .muted { color: var(--muted); font-size: 14px; }
+.contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.contacts .phone { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--accent); }
+.map { width: 100%; aspect-ratio: 650/340; object-fit: cover; display: block; border-radius: 16px; filter: grayscale(.35); }
+.cta { margin-top: 72px; text-align: center; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 20px; padding: 40px 20px; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { color: #d9dbde; margin: 0 0 20px; }
+.cta .actions { justify-content: center; }
+.demo { margin: 48px 0 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; }
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(10,10,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+.callbar .btn { flex: 1; }
+@media (min-width: 821px) { .callbar { display: none; } body { padding-bottom: 0; } }
+@media (max-width: 820px) {
+  .contacts, .why, .price { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .top .phone-top { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <a class="logo" href="#">Автоконтинент<i>.</i></a>
+  <a class="phone-top" href="tel:+73452666600">+7 (3452) 66-66-00</a>
+</div></div>
+
+<header class="hero">
+  <img class="hero-img" src="https://i8.photo.2gis.com/photo-gallery/6a870cf2-9486-4527-9142-184f70681893_1920x1080.jpg" alt="" referrerpolicy="no-referrer" onerror="document.body.classList.add('no-photo');this.remove()">
+  <div class="wrap">
+    <span class="tag">автосервис по ремонту автомобилей и продаже запчастей · Тюмень</span>
+    <h1>Автоконтинент</h1>
+    <p class="lead">улица Мельникайте, 8а, Центральный округ. Ежедневно 9:00–20:00.</p>
+    <a class="rating" href="https://2gis.ru/tyumen/firm/70000001104574321/tab/reviews" target="_blank" rel="noopener"><b>★ 4.9</b> 138 оценок в 2ГИС</a>
+    <div class="actions">
+      <a class="btn" href="tel:+73452666600">Позвонить +7 (3452) 66-66-00</a>
+      <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.167884,65.600396" target="_blank" rel="noopener">Построить маршрут</a>
+      <a class="btn ghost" href="https://vk.com/avtokontinent72" target="_blank" rel="noopener">ВКонтакте</a><a class="btn ghost" href="https://t.me/+79829666601" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://max.ru/join/eZ1qEpCCWBGN3md8Aakr6mEagti4EVvxAhan_oMoRzo" target="_blank" rel="noopener">MAX</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div><b>★ 4.9</b><span>средняя оценка в 2ГИС</span></div>
+    <div><b>138</b><span>оценок клиентов</span></div>
+    <div><b>16</b><span>направлений работ</span></div>
+    <div><b>Ежедневно 9–20</b><span>часы работы</span></div>
+  </div>
+
+  <section id="why">
+    <p class="kicker">Почему к нам едут</p>
+    <h2>Что отмечают клиенты</h2>
+    <div class="why">
+      <div>
+        <div class="chips"><span class="chip">Отличный сервис</span><span class="chip">Сделали быстро</span><span class="chip">Отличный автосервис</span><span class="chip">Быстро и качественно</span><span class="chip">Адекватные цены</span><span class="chip">Вежливый персонал</span></div>
+        <ul class="perks"><li>Пандус</li><li>Отвечают на отзывы клиентов в 2ГИС</li><li>Оплата: карта, наличные, безналичный расчёт, qr-код</li></ul>
+      </div>
+      <figure class="featured"><blockquote>«Хочу выразить огромную благодарность ребятам данного сервиса! Была проблема с краном отопителя печки(бежал антифриз в салон). Нашли проблему, по всем вопросам проконсультировали, проблему устранили! Спасибо!😊»</blockquote><figcaption>Виктория Л. · 5 ноября 2026 · отзыв в 2ГИС</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="kicker">Услуги</p>
+    <h2>Чем можем помочь</h2>
+    <ul class="services"><li><span class="num">01</span><h3>Запчасти для иномарок</h3><p>Подбор запчастей для иномарок.</p></li><li><span class="num">02</span><h3>Развал-схождение</h3><p>Регулировка углов установки колёс — когда машину уводит в сторону или неровно стирается резина.</p></li><li><span class="num">03</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок электронных систем — чтобы понять, почему горит Check Engine.</p></li><li><span class="num">04</span><h3>Замена масла</h3><p class="detail">Аппаратная</p><p>Плановая замена масла по регламенту автомобиля.</p></li><li><span class="num">05</span><h3>Ремонт электронных систем</h3><p>Проводка, датчики, блоки управления — неисправности, которые не видно глазом.</p></li><li><span class="num">06</span><h3>Ремонт ходовой части</h3><p>Стуки и скрипы на неровностях, люфты, неровный ход — причина обычно в подвеске.</p></li><li><span class="num">07</span><h3>Ремонт дизельных двигателей</h3><p>Неисправности дизеля: тяжёлый запуск, дым, потеря тяги, посторонние шумы.</p></li><li><span class="num">08</span><h3>Ремонт бензиновых двигателей</h3><p>Поиск и устранение неисправностей двигателя: потеря мощности, посторонние шумы, повышенный расход.</p></li><li><span class="num">09</span><h3>Отогрев автомобиля</h3><p>Когда машина не заводится на морозе.</p></li><li><span class="num">10</span><h3>Обслуживание кондиционеров</h3><p>Проверка и заправка кондиционера, чтобы в жару в салоне было прохладно.</p></li><li><span class="num">11</span><h3>Ремонт стартеров и генераторов</h3><p>Машина плохо заводится или садится аккумулятор — часто дело в стартере или генераторе.</p></li><li><span class="num">12</span><h3>Шиномонтаж</h3><p class="detail">Замена колодок</p><p>Сезонная смена шин и колёс, ремонт проколов.</p></li><li><span class="num">13</span><h3>Хранение шин</h3><p>Сезонный комплект остаётся в сервисе — не нужно держать колёса на балконе или в гараже.</p></li><li><span class="num">14</span><h3>Аккумуляторы</h3><p>Подбор, проверка и замена аккумулятора.</p></li><li><span class="num">15</span><h3>Запчасти для отечественных автомобилей</h3><p>Подбор запчастей для отечественных автомобилей.</p></li><li><span class="num">16</span><h3>Ремонт инжекторов</h3><p>Чистка и проверка форсунок — когда двигатель троит, растёт расход или падает мощность.</p></li></ul>
+  </section>
+
+  <section id="price">
+    <p class="kicker">Стоимость и запись</p>
+    <h2>Как записаться</h2>
+    <div class="price">
+      <div>
+        
+        <p>Стоимость зависит от автомобиля и объёма работ — назовём по телефону.</p>
+        <a class="btn" href="tel:+73452666600">Узнать стоимость</a>
+      </div>
+      <ol class="steps">
+        <li><div><b>Позвоните или напишите в ВКонтакте / Telegram / MAX</b><span>+7 (3452) 66-66-00</span></div></li>
+        <li><div><b>Расскажите, что с машиной</b><span>Марка, модель и что беспокоит — так проще сориентировать по работам.</span></div></li>
+        <li><div><b>Приезжайте</b><span>улица Мельникайте, 8а. Ежедневно 9:00–20:00.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="photos"><p class="kicker">Фото</p><h2>Как у нас</h2><div class="gallery"><img src="https://i8.photo.2gis.com/photo-gallery/9cecd46c-43f7-421d-abf4-d67c2b8329db_1280x.jpg" alt="Автоконтинент" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i0.photo.2gis.com/photo-gallery/17e74355-b607-4aa9-a173-f0c498794190_1280x.jpg" alt="Автоконтинент" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i1.photo.2gis.com/photo-gallery/8781d436-be09-4114-b9e3-aebac0575179_1280x.jpg" alt="Автоконтинент" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i7.photo.2gis.com/photo-gallery/c1a6c06b-3ec1-4b8e-a1a5-b20e5608556e_1280x.jpg" alt="Автоконтинент" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i3.photo.2gis.com/photo-gallery/c683b91c-74b0-48d7-86a2-d077d797b043_1280x.jpg" alt="Автоконтинент" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div></section>
+
+  <section id="reviews">
+    <p class="kicker">Отзывы</p>
+    <h2>Что пишут в 2ГИС</h2>
+    <div class="reviews"><figure class="review"><blockquote>«Лучший автосервис! Компанию знаю еще с Нижневартовска с 2008! Все лучшие специалисты, упор на сервис и качество!
+Так же есть шиномонтаж👍»</blockquote><figcaption>Руслан Н. · 4 ноября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Великолепный автосервис! Приехал к ним после ремонта ходовой в другом автосервисе, где заменили много деталей в ходовой, но не устранили стук из подпола внизу. Даже после повторного моего заезда и осмотра авто тремя специалистами… 
+Здесь же просто забрали ключи и через час вернули автомобиль без стуков! Однозначно рекомендую!»</blockquote><figcaption>Александр В. · 1 ноября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Хороший сервис, приятная комната ожидания, еще скоро сделают 2 этаж»</blockquote><figcaption>Алексей с. · 31 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Хорошая организация уже не первый раз заезжаем всегда помогают и хорошо выполняют свою работу спасибо большое ребятам 👍👍👍👍»</blockquote><figcaption>Лидия Е. · 31 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Отличный сервис, быстро и качественно сделали сход развал
+Цены лучшие в городе 👍»</blockquote><figcaption>Евгений К. · 30 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Отличные сотрудники! Спасли в сложной ситуации, приехали помогли с заменой колеса, огромное спасибо. ☺️ 
+Переобули тоже без проблем!»</blockquote><figcaption>Клавдия К. · 24 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Ремонтировал машину у них, все четко, быстро, понятно, без скрытых наценок. Рекомендую.»</blockquote><figcaption>Андрей О. · 17 октября 2026 · отзыв в 2ГИС</figcaption></figure></div>
+    <p class="muted" style="margin-top:4px">Все отзывы — <a href="https://2gis.ru/tyumen/firm/70000001104574321/tab/reviews" target="_blank" rel="noopener">в 2ГИС</a>.</p>
+  </section>
+
+  <section id="contacts">
+    <p class="kicker">Контакты</p>
+    <h2>Как нас найти</h2>
+    <div class="contacts">
+      <div>
+        <p><b>улица Мельникайте, 8а</b>, Центральный округ, Тюмень</p>
+        <p>Ежедневно 9:00–20:00</p>
+        
+        <p><a class="phone" href="tel:+73452666600">+7 (3452) 66-66-00</a><br><a class="phone" href="tel:+79829666601">+7-982-966-66-01</a> <span class="muted">(магазин запчастей)</span><br><a class="phone" href="tel:+79829666600">+7-982-966-66-00</a> <span class="muted">(автосервис)</span><br></p>
+        <div class="actions">
+          <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.167884,65.600396" target="_blank" rel="noopener">Построить маршрут</a>
+          <a class="btn ghost" href="https://vk.com/avtokontinent72" target="_blank" rel="noopener">ВКонтакте</a><a class="btn ghost" href="https://t.me/+79829666601" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://max.ru/join/eZ1qEpCCWBGN3md8Aakr6mEagti4EVvxAhan_oMoRzo" target="_blank" rel="noopener">MAX</a>
+        </div>
+      </div>
+      <a href="https://yandex.ru/maps/?pt=65.600396,57.167884&amp;z=17&amp;l=map" target="_blank" rel="noopener"><img class="map" loading="lazy" alt="Автоконтинент на карте" src="https://static-maps.yandex.ru/1.x/?ll=65.600396,57.167884&amp;z=16&amp;size=650,340&amp;l=map&amp;pt=65.600396,57.167884,pm2rdl"></a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Нужен ремонт или шиномонтаж?</h2>
+    <p>Позвоните — подскажем, когда удобнее подъехать.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+73452666600">Позвонить +7 (3452) 66-66-00</a>
+      <a class="btn ghost" href="https://vk.com/avtokontinent72" target="_blank" rel="noopener">ВКонтакте</a><a class="btn ghost" href="https://t.me/+79829666601" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://max.ru/join/eZ1qEpCCWBGN3md8Aakr6mEagti4EVvxAhan_oMoRzo" target="_blank" rel="noopener">MAX</a>
+    </div>
+  </div>
+
+  <p class="demo">Демо-концепт сайта для «Автоконтинент». Подготовлен как предложение и не является официальным сайтом компании.
+  Данные, отзывы и фото — из открытой карточки организации в 2ГИС. Удалим по первой просьбе.</p>
+</main>
+
+<nav class="callbar">
+  <a class="btn" href="tel:+73452666600">Позвонить</a>
+  <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.167884,65.600396" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ТехноРим72 — автосервис, Тюмень</title>
+<meta name="description" content="ТехноРим72: автосервис в Тюмени, улица 50 лет Октября, 199 ст1. Пн–пт 8:00–20:00; сб–вс 9:00–19:00. Телефон +7 (3452) 57-57-07.">
+<style>
+:root { --accent: #f2c230; --bg: #17150f; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.1); --text: #f2f2f2; --muted: #a3a7ad; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: 76px; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.logo { font-weight: 900; letter-spacing: -.01em; font-size: 18px; text-decoration: none; }
+.logo i { color: var(--accent); font-style: normal; }
+.top .phone-top { font-weight: 700; text-decoration: none; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 35%, var(--bg) 94%); }
+body.no-photo .hero { min-height: 72vh; background: radial-gradient(120% 90% at 85% 0%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 60%), repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 14px, transparent 14px 28px); }
+.hero .wrap { position: relative; z-index: 1; padding-top: 96px; padding-bottom: 48px; width: 100%; }
+.tag { display: inline-block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 12px; }
+h1 { font-size: clamp(44px, 10vw, 96px); line-height: .95; margin: 0 0 16px; font-weight: 900; letter-spacing: -.02em; }
+.lead { font-size: clamp(17px, 2.2vw, 20px); color: #e2e4e7; max-width: 640px; margin: 0 0 20px; }
+.rating { display: inline-flex; gap: 8px; align-items: center; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; margin-bottom: 24px; text-decoration: none; backdrop-filter: blur(6px); }
+.rating b { color: var(--accent); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 800; text-decoration: none; }
+.btn.ghost { background: rgba(0,0,0,.25); color: var(--text); border: 1px solid var(--line); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: -8px; position: relative; z-index: 1; }
+.stats div { background: var(--bg); padding: 20px 18px; }
+.stats b { display: block; font-size: clamp(24px, 4vw, 34px); line-height: 1.1; font-weight: 900; color: var(--accent); }
+.stats span { color: var(--muted); font-size: 14px; }
+section { padding: 72px 0 8px; }
+.kicker { color: var(--accent); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; margin: 0 0 8px; }
+h2 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 0 0 24px; letter-spacing: -.01em; }
+.why { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 999px; padding: 7px 14px; font-weight: 600; font-size: 15px; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.perks li { padding-left: 30px; position: relative; }
+.perks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #111; font-size: 12px; font-weight: 900; display: grid; place-items: center; margin-top: 2px; }
+.featured { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; position: relative; }
+.featured blockquote { margin: 0 0 14px; font-size: 18px; line-height: 1.5; }
+.featured::before { content: "“"; position: absolute; top: -18px; left: 20px; font-size: 80px; line-height: 1; color: var(--accent); font-family: Georgia, serif; }
+.services { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.services li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; }
+.services .num { color: var(--accent); font-weight: 900; font-size: 13px; letter-spacing: .05em; }
+.services h3 { font-size: 18px; margin: 4px 0 6px; line-height: 1.25; }
+.services p { margin: 0; color: var(--muted); font-size: 15px; }
+.services p.detail { color: var(--text); margin-bottom: 6px; }
+.price { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+.price p { margin: 0 0 14px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 900; display: grid; place-items: center; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 15px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; aspect-ratio: 656/340; object-fit: cover; border-radius: 12px; display: block; }
+.reviews { columns: 3 280px; column-gap: 14px; }
+.review { break-inside: avoid; margin: 0 0 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.review blockquote { margin: 0 0 12px; }
+.review figcaption, .featured figcaption, .muted { color: var(--muted); font-size: 14px; }
+.contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.contacts .phone { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--accent); }
+.map { width: 100%; aspect-ratio: 650/340; object-fit: cover; display: block; border-radius: 16px; filter: grayscale(.35); }
+.cta { margin-top: 72px; text-align: center; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 20px; padding: 40px 20px; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { color: #d9dbde; margin: 0 0 20px; }
+.cta .actions { justify-content: center; }
+.demo { margin: 48px 0 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; }
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(10,10,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+.callbar .btn { flex: 1; }
+@media (min-width: 821px) { .callbar { display: none; } body { padding-bottom: 0; } }
+@media (max-width: 820px) {
+  .contacts, .why, .price { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .top .phone-top { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <a class="logo" href="#">ТехноРим72<i>.</i></a>
+  <a class="phone-top" href="tel:+73452575707">+7 (3452) 57-57-07</a>
+</div></div>
+
+<header class="hero">
+  <img class="hero-img" src="https://i6.photo.2gis.com/photo-gallery/477b2ec1-bea0-408c-8b8c-98cd7b4259c8_1920x1080.jpg" alt="" referrerpolicy="no-referrer" onerror="document.body.classList.add('no-photo');this.remove()">
+  <div class="wrap">
+    <span class="tag">автосервис · Тюмень</span>
+    <h1>ТехноРим72</h1>
+    <p class="lead">улица 50 лет Октября, 199 ст1, Ленинский округ. Пн–пт 8:00–20:00; сб–вс 9:00–19:00.</p>
+    <a class="rating" href="https://2gis.ru/tyumen/firm/70000001032707713/tab/reviews" target="_blank" rel="noopener"><b>★ 5.0</b> 172 оценки в 2ГИС</a>
+    <div class="actions">
+      <a class="btn" href="tel:+73452575707">Позвонить +7 (3452) 57-57-07</a>
+      <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.122322,65.616982" target="_blank" rel="noopener">Построить маршрут</a>
+      <a class="btn ghost" href="https://wa.me/79048881207?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div><b>★ 5.0</b><span>средняя оценка в 2ГИС</span></div>
+    <div><b>172</b><span>оценки клиентов</span></div>
+    <div><b>4</b><span>направления работ</span></div>
+    <div><b>Без выходных</b><span>часы работы</span></div>
+  </div>
+
+  <section id="why">
+    <p class="kicker">Почему к нам едут</p>
+    <h2>Что отмечают клиенты</h2>
+    <div class="why">
+      <div>
+        <div class="chips"><span class="chip">Сделали качественно</span><span class="chip">Отличный сервис</span><span class="chip">Быстро и качественно</span><span class="chip">Сделали быстро</span><span class="chip">Адекватные цены</span><span class="chip">Грамотный персонал</span></div>
+        <ul class="perks"><li>Отвечают на отзывы клиентов в 2ГИС</li><li>Оплата: карта, наличные, перевод с карты</li></ul>
+      </div>
+      <figure class="featured"><blockquote>«Качественно сделали и не дорого🔥🔥🔥
+Персонал отзывчивой советую всем 🤝»</blockquote><figcaption>Данил В. · 7 июля 2026 · отзыв в 2ГИС</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="kicker">Услуги</p>
+    <h2>Чем можем помочь</h2>
+    <ul class="services"><li><span class="num">01</span><h3>Ремонт бензиновых двигателей</h3><p class="detail">Шлифовка, расточка, опрессовка</p><p>Поиск и устранение неисправностей двигателя: потеря мощности, посторонние шумы, повышенный расход.</p></li><li><span class="num">02</span><h3>Ремонт дизельных двигателей</h3><p>Неисправности дизеля: тяжёлый запуск, дым, потеря тяги, посторонние шумы.</p></li><li><span class="num">03</span><h3>Ремонт стартеров и генераторов</h3><p>Машина плохо заводится или садится аккумулятор — часто дело в стартере или генераторе.</p></li><li><span class="num">04</span><h3>Запчасти для иномарок</h3><p>Подбор запчастей для иномарок.</p></li></ul>
+  </section>
+
+  <section id="price">
+    <p class="kicker">Стоимость и запись</p>
+    <h2>Как записаться</h2>
+    <div class="price">
+      <div>
+        
+        <p>Стоимость зависит от автомобиля и объёма работ — назовём по телефону.</p>
+        <a class="btn" href="tel:+73452575707">Узнать стоимость</a>
+      </div>
+      <ol class="steps">
+        <li><div><b>Позвоните или напишите в WhatsApp</b><span>+7 (3452) 57-57-07</span></div></li>
+        <li><div><b>Расскажите, что с машиной</b><span>Марка, модель и что беспокоит — так проще сориентировать по работам.</span></div></li>
+        <li><div><b>Приезжайте</b><span>улица 50 лет Октября, 199 ст1. Пн–пт 8:00–20:00; сб–вс 9:00–19:00.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="photos"><p class="kicker">Фото</p><h2>Как у нас</h2><div class="gallery"><img src="https://i7.photo.2gis.com/photo-gallery/acbb0ec2-2710-4c50-8453-0c3e3a44baf2_1280x.jpg" alt="ТехноРим72" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i7.photo.2gis.com/photo-gallery/c45e8a2e-d121-4eed-83da-fd572c9f76df_1280x.jpg" alt="ТехноРим72" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i8.photo.2gis.com/photo-gallery/05d3ed1d-ea05-42f1-8f8f-5ff6054120f0_1280x.jpg" alt="ТехноРим72" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i7.photo.2gis.com/images/branch/0/30258560144832055_de0a_1280x.jpg" alt="ТехноРим72" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i1.photo.2gis.com/images/branch/13/1829587396748095_cbf7_1280x.jpg" alt="ТехноРим72" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div></section>
+
+  <section id="reviews">
+    <p class="kicker">Отзывы</p>
+    <h2>Что пишут в 2ГИС</h2>
+    <div class="reviews"><figure class="review"><blockquote>«Езжу сюда с 23 года, обслуживаю гбц с разных автомобилей, приятно иметь дело с Профессионалами своего дела, быстро, оперативно в максимально короткие сроки делают
+
+Рекомендую!»</blockquote><figcaption>Константин П. · 25 апреля 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Сдал перед новым годом свою ГБЦ, уже закрыты были, но специалист всё равно принял. Парни откапиталили после праздников сразу. заменили, опрессовали, притёрли, помыли, собрали, дали гарантию. Единственное- очень жаль, что она не подошла к моему авто, т.к. интернет- магазин отправил не ту, что надо. Механик когда увидел её (ГБЦ)-показал 2 больших пальца вверх и очень был удивлён этой работе! 👍👍 😎☝️😁🔥👏»</blockquote><figcaption>Артём И. · 6 марта 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Делал блок с коленом на круза, ребята зделали дефектовку, с орионтировали по цене запчастей и стоимости работ, вобщем я доволен 10 000 км полет нормальный. Ребятам респект, мастера своего дела👍»</blockquote><figcaption>Михаил Ш. · 18 января 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«отдавал Гбц на полный кап ремонт , и блок на расточку цилиндров в сентябре , от BMW 528 , работу выполнили качественно , при выдаче даже не узнал свои детали , будто бы новые , проехал уже 15000км , двигатель работает отлично , рекомендую данную организацию, цена приятнее чем у конкурентов 👍👍👍»</blockquote><figcaption>Михаил В. · 13 января 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Обращаюсь в сервис не первый год, качественно делают свою работу, рекомендую!»</blockquote><figcaption>Николай М. · 13 января 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Профессионалы. Несколько раз обращался, все сделали по высшему разряду!»</blockquote><figcaption>Иван Щ. · 16 августа 2025 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Отличный сервис,приятные сотрудники,быстро качественно,приятная цена»</blockquote><figcaption>Лиана И. · 9 августа 2025 · отзыв в 2ГИС</figcaption></figure></div>
+    <p class="muted" style="margin-top:4px">Все отзывы — <a href="https://2gis.ru/tyumen/firm/70000001032707713/tab/reviews" target="_blank" rel="noopener">в 2ГИС</a>.</p>
+  </section>
+
+  <section id="contacts">
+    <p class="kicker">Контакты</p>
+    <h2>Как нас найти</h2>
+    <div class="contacts">
+      <div>
+        <p><b>улица 50 лет Октября, 199 ст1</b>, Ленинский округ, Тюмень</p>
+        <p>Пн–пт 8:00–20:00; сб–вс 9:00–19:00</p>
+        
+        <p><a class="phone" href="tel:+73452575707">+7 (3452) 57-57-07</a><br></p>
+        <div class="actions">
+          <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.122322,65.616982" target="_blank" rel="noopener">Построить маршрут</a>
+          <a class="btn ghost" href="https://wa.me/79048881207?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <a href="https://yandex.ru/maps/?pt=65.616982,57.122322&amp;z=17&amp;l=map" target="_blank" rel="noopener"><img class="map" loading="lazy" alt="ТехноРим72 на карте" src="https://static-maps.yandex.ru/1.x/?ll=65.616982,57.122322&amp;z=16&amp;size=650,340&amp;l=map&amp;pt=65.616982,57.122322,pm2rdl"></a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Нужен ремонт или шиномонтаж?</h2>
+    <p>Позвоните — подскажем, когда удобнее подъехать.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+73452575707">Позвонить +7 (3452) 57-57-07</a>
+      <a class="btn ghost" href="https://wa.me/79048881207?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <p class="demo">Демо-концепт сайта для «ТехноРим72». Подготовлен как предложение и не является официальным сайтом компании.
+  Данные, отзывы и фото — из открытой карточки организации в 2ГИС. Удалим по первой просьбе.</p>
+</main>
+
+<nav class="callbar">
+  <a class="btn" href="tel:+73452575707">Позвонить</a>
+  <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.122322,65.616982" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+</body>
+</html>

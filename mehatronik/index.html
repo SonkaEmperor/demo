@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Мехатроник — автотехнический центр по ремонту и обслуживанию автомобилей, Тюмень</title>
+<meta name="description" content="Мехатроник: автотехнический центр по ремонту и обслуживанию автомобилей в Тюмени, Матмасовская улица, 52 ст2. Пн–пт 10:00–19:00; сб–вс выходной. Телефон +7-996-640-29-99.">
+<style>
+:root { --accent: #14b8a6; --bg: #0e1817; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.1); --text: #f2f2f2; --muted: #a3a7ad; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: 76px; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.logo { font-weight: 900; letter-spacing: -.01em; font-size: 18px; text-decoration: none; }
+.logo i { color: var(--accent); font-style: normal; }
+.top .phone-top { font-weight: 700; text-decoration: none; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 35%, var(--bg) 94%); }
+body.no-photo .hero { min-height: 72vh; background: radial-gradient(120% 90% at 85% 0%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 60%), repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 14px, transparent 14px 28px); }
+.hero .wrap { position: relative; z-index: 1; padding-top: 96px; padding-bottom: 48px; width: 100%; }
+.tag { display: inline-block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 12px; }
+h1 { font-size: clamp(44px, 10vw, 96px); line-height: .95; margin: 0 0 16px; font-weight: 900; letter-spacing: -.02em; }
+.lead { font-size: clamp(17px, 2.2vw, 20px); color: #e2e4e7; max-width: 640px; margin: 0 0 20px; }
+.rating { display: inline-flex; gap: 8px; align-items: center; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; margin-bottom: 24px; text-decoration: none; backdrop-filter: blur(6px); }
+.rating b { color: var(--accent); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 800; text-decoration: none; }
+.btn.ghost { background: rgba(0,0,0,.25); color: var(--text); border: 1px solid var(--line); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: -8px; position: relative; z-index: 1; }
+.stats div { background: var(--bg); padding: 20px 18px; }
+.stats b { display: block; font-size: clamp(24px, 4vw, 34px); line-height: 1.1; font-weight: 900; color: var(--accent); }
+.stats span { color: var(--muted); font-size: 14px; }
+section { padding: 72px 0 8px; }
+.kicker { color: var(--accent); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; margin: 0 0 8px; }
+h2 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 0 0 24px; letter-spacing: -.01em; }
+.why { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 999px; padding: 7px 14px; font-weight: 600; font-size: 15px; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.perks li { padding-left: 30px; position: relative; }
+.perks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #111; font-size: 12px; font-weight: 900; display: grid; place-items: center; margin-top: 2px; }
+.featured { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; position: relative; }
+.featured blockquote { margin: 0 0 14px; font-size: 18px; line-height: 1.5; }
+.featured::before { content: "“"; position: absolute; top: -18px; left: 20px; font-size: 80px; line-height: 1; color: var(--accent); font-family: Georgia, serif; }
+.services { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.services li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; }
+.services .num { color: var(--accent); font-weight: 900; font-size: 13px; letter-spacing: .05em; }
+.services h3 { font-size: 18px; margin: 4px 0 6px; line-height: 1.25; }
+.services p { margin: 0; color: var(--muted); font-size: 15px; }
+.services p.detail { color: var(--text); margin-bottom: 6px; }
+.price { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+.price p { margin: 0 0 14px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 900; display: grid; place-items: center; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 15px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; aspect-ratio: 656/340; object-fit: cover; border-radius: 12px; display: block; }
+.reviews { columns: 3 280px; column-gap: 14px; }
+.review { break-inside: avoid; margin: 0 0 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.review blockquote { margin: 0 0 12px; }
+.review figcaption, .featured figcaption, .muted { color: var(--muted); font-size: 14px; }
+.contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.contacts .phone { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--accent); }
+.map { width: 100%; aspect-ratio: 650/340; object-fit: cover; display: block; border-radius: 16px; filter: grayscale(.35); }
+.cta { margin-top: 72px; text-align: center; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 20px; padding: 40px 20px; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { color: #d9dbde; margin: 0 0 20px; }
+.cta .actions { justify-content: center; }
+.demo { margin: 48px 0 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; }
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(10,10,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+.callbar .btn { flex: 1; }
+@media (min-width: 821px) { .callbar { display: none; } body { padding-bottom: 0; } }
+@media (max-width: 820px) {
+  .contacts, .why, .price { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .top .phone-top { display: none; }
+}
+</style>
+</head>
+<body class="no-photo">
+<div class="top"><div class="wrap">
+  <a class="logo" href="#">Мехатроник<i>.</i></a>
+  <a class="phone-top" href="tel:+79966402999">+7-996-640-29-99</a>
+</div></div>
+
+<header class="hero">
+  
+  <div class="wrap">
+    <span class="tag">автотехнический центр по ремонту и обслуживанию автомобилей · Тюмень</span>
+    <h1>Мехатроник</h1>
+    <p class="lead">Матмасовская улица, 52 ст2, Ленинский округ. Пн–пт 10:00–19:00; сб–вс выходной.</p>
+    <a class="rating" href="https://2gis.ru/tyumen/firm/70000001092040238/tab/reviews" target="_blank" rel="noopener"><b>★ 5.0</b> 69 оценок в 2ГИС</a>
+    <div class="actions">
+      <a class="btn" href="tel:+79966402999">Позвонить +7-996-640-29-99</a>
+      <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.191651,65.620272" target="_blank" rel="noopener">Построить маршрут</a>
+      <a class="btn ghost" href="https://max.ru/u/f9LHodD0cOKYcIqGfoX3O4ClT_0mzCErmuwlTDtPReY9lear6Lyz6J0OX2A" target="_blank" rel="noopener">MAX</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div><b>★ 5.0</b><span>средняя оценка в 2ГИС</span></div>
+    <div><b>69</b><span>оценок клиентов</span></div>
+    <div><b>13</b><span>направлений работ</span></div>
+    <div><b>10–19</b><span>часы работы</span></div>
+  </div>
+
+  <section id="why">
+    <p class="kicker">Почему к нам едут</p>
+    <h2>Что отмечают клиенты</h2>
+    <div class="why">
+      <div>
+        <div class="chips"></div>
+        <ul class="perks"><li>Специализация: Audi, Porsche, SEAT, Skoda, Volkswagen</li><li>Wi-Fi для клиентов</li><li>Отвечают на отзывы клиентов в 2ГИС</li><li>Оплата: карта, наличные, безналичный расчёт, перевод с карты, qr-код</li></ul>
+      </div>
+      <figure class="featured"><blockquote>«Отличный сервис. До этого меняли датчики в других сервисах, что давало кратко срочный эффект. Только в Мехатронике ребята нашли истинную проблему в проводке и решили проблему без лишних трат с моей стороны. Сервисом очень довольна и всем рекомендую!»</blockquote><figcaption>Городская л. · 20 сентября 2026 · отзыв в 2ГИС</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="kicker">Услуги</p>
+    <h2>Чем можем помочь</h2>
+    <ul class="services"><li><span class="num">01</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок электронных систем — чтобы понять, почему горит Check Engine.</p></li><li><span class="num">02</span><h3>Ремонт АКПП</h3><p>Автоматическая коробка: рывки, пинки при переключении, пробуксовка.</p></li><li><span class="num">03</span><h3>Ремонт МКПП</h3><p>Хруст при переключении, тугие передачи, шум в коробке.</p></li><li><span class="num">04</span><h3>Ремонт бензиновых двигателей</h3><p>Поиск и устранение неисправностей двигателя: потеря мощности, посторонние шумы, повышенный расход.</p></li><li><span class="num">05</span><h3>Ремонт дизельных двигателей</h3><p>Неисправности дизеля: тяжёлый запуск, дым, потеря тяги, посторонние шумы.</p></li><li><span class="num">06</span><h3>Ремонт ходовой части</h3><p>Стуки и скрипы на неровностях, люфты, неровный ход — причина обычно в подвеске.</p></li><li><span class="num">07</span><h3>Ремонт электронных систем</h3><p>Проводка, датчики, блоки управления — неисправности, которые не видно глазом.</p></li><li><span class="num">08</span><h3>Замена масла</h3><p class="detail">Аппаратная</p><p>Плановая замена масла по регламенту автомобиля.</p></li><li><span class="num">09</span><h3>Обслуживание кондиционеров</h3><p>Проверка и заправка кондиционера, чтобы в жару в салоне было прохладно.</p></li><li><span class="num">10</span><h3>Ремонт стартеров и генераторов</h3><p>Машина плохо заводится или садится аккумулятор — часто дело в стартере или генераторе.</p></li><li><span class="num">11</span><h3>Ремонт инжекторов</h3><p>Чистка и проверка форсунок — когда двигатель троит, растёт расход или падает мощность.</p></li><li><span class="num">12</span><h3>Сварочные работы</h3><p>Сварка металлических деталей автомобиля.</p></li><li><span class="num">13</span><h3>Ремонт турбин</h3><p>Турбина: потеря мощности, свист, дым, расход масла.</p></li></ul>
+  </section>
+
+  <section id="price">
+    <p class="kicker">Стоимость и запись</p>
+    <h2>Как записаться</h2>
+    <div class="price">
+      <div>
+        
+        <p>Стоимость зависит от автомобиля и объёма работ — назовём по телефону.</p>
+        <a class="btn" href="tel:+79966402999">Узнать стоимость</a>
+      </div>
+      <ol class="steps">
+        <li><div><b>Позвоните или напишите в MAX</b><span>+7-996-640-29-99</span></div></li>
+        <li><div><b>Расскажите, что с машиной</b><span>Марка, модель и что беспокоит — так проще сориентировать по работам.</span></div></li>
+        <li><div><b>Приезжайте</b><span>Матмасовская улица, 52 ст2. Пн–пт 10:00–19:00; сб–вс выходной.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  
+
+  <section id="reviews">
+    <p class="kicker">Отзывы</p>
+    <h2>Что пишут в 2ГИС</h2>
+    <div class="reviews"><figure class="review"><blockquote>«Добрый день. 
+Отзыв немного с опозданием. Долго не могли найти проблему в именитых профильных сервисах нашего города (бмв7). Приехал к ребятам, полностью все решили, нашли все неисправности. Оперативно заказали детали, и заменили. Плюсом провели ТО. Все цены озвучивают. Сервис и клиентоориентированность на 5+.»</blockquote><figcaption>Роман Н. · 11 июля 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Ребята помогли разобраться с вибромотором на BMW G30, теперь ассистенты работают исправно. Всё сделали чётко и профессионально. Рекомендую»</blockquote><figcaption>Aleksandr K. · 1 июля 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Обратился сюда за помощью, течка антифриза. Быстро обговорили когда и во сколько приезжать. Оформили быструю доставку запчастей и поменяли решетку радиатора, все чётко и оперативно. Рекомендую!»</blockquote><figcaption>Данил И. · 26 июня 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Обратился в данный сервис с проблемой мехатроника. Договорился на дату ремонта, приехал оставил автомобиль. Дождался звонка о том что автомобиль готов. Приехал проверил, отплатил. Вежливый персонал, готовы всегда ответить на вопросы. Никаких услуг дополнительно не навязывали. Все четко. Спасибо за ремонт. Буду обращаться по мере необходимости. Рекомендую данный автосервис.»</blockquote><figcaption>Руслан Х. · 18 мая 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Грамотно и быстро решили проблему, заранее согласовав стоимость работ и материалов. Советую по вопросам электрики однозначно данный сервис!»</blockquote><figcaption>Алексей Л. · 14 мая 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Все супер , парни знают своё дело , рекомендую 👍только к ним 👌🏿спасибо 🤝»</blockquote><figcaption>Dobro 7. · 5 мая 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Отличный сервис. Отремонтировали на моей ракете мехатроник, провели диагностику, выдали рекомендации, так же выявили порванный на предыдущем сто пыльник гранаты, все оперативно заменили. Настроили КПП. Через неделю поинтересовались как работает автомобиль, и предложили сделать повторную адаптацию КПП. Ребята молодцы, знают своё дело. В сервисе все чисто и аккуратно. Есть зона для клиентов с чаем, кофе и телевизором. Рекомендую!»</blockquote><figcaption>Максим И. · 30 апреля 2026 · отзыв в 2ГИС</figcaption></figure></div>
+    <p class="muted" style="margin-top:4px">Все отзывы — <a href="https://2gis.ru/tyumen/firm/70000001092040238/tab/reviews" target="_blank" rel="noopener">в 2ГИС</a>.</p>
+  </section>
+
+  <section id="contacts">
+    <p class="kicker">Контакты</p>
+    <h2>Как нас найти</h2>
+    <div class="contacts">
+      <div>
+        <p><b>Матмасовская улица, 52 ст2</b>, Ленинский округ, Тюмень</p>
+        <p>Пн–пт 10:00–19:00; сб–вс выходной</p>
+        
+        <p><a class="phone" href="tel:+79966402999">+7-996-640-29-99</a><br><a class="phone" href="tel:+79966412999">+7-996-641-29-99</a><br></p>
+        <div class="actions">
+          <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.191651,65.620272" target="_blank" rel="noopener">Построить маршрут</a>
+          <a class="btn ghost" href="https://max.ru/u/f9LHodD0cOKYcIqGfoX3O4ClT_0mzCErmuwlTDtPReY9lear6Lyz6J0OX2A" target="_blank" rel="noopener">MAX</a>
+        </div>
+      </div>
+      <a href="https://yandex.ru/maps/?pt=65.620272,57.191651&amp;z=17&amp;l=map" target="_blank" rel="noopener"><img class="map" loading="lazy" alt="Мехатроник на карте" src="https://static-maps.yandex.ru/1.x/?ll=65.620272,57.191651&amp;z=16&amp;size=650,340&amp;l=map&amp;pt=65.620272,57.191651,pm2rdl"></a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Нужен ремонт или шиномонтаж?</h2>
+    <p>Позвоните — подскажем, когда удобнее подъехать.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+79966402999">Позвонить +7-996-640-29-99</a>
+      <a class="btn ghost" href="https://max.ru/u/f9LHodD0cOKYcIqGfoX3O4ClT_0mzCErmuwlTDtPReY9lear6Lyz6J0OX2A" target="_blank" rel="noopener">MAX</a>
+    </div>
+  </div>
+
+  <p class="demo">Демо-концепт сайта для «Мехатроник». Подготовлен как предложение и не является официальным сайтом компании.
+  Данные, отзывы и фото — из открытой карточки организации в 2ГИС. Удалим по первой просьбе.</p>
+</main>
+
+<nav class="callbar">
+  <a class="btn" href="tel:+79966402999">Позвонить</a>
+  <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.191651,65.620272" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+</body>
+</html>

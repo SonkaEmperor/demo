@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>А2 — автосервис полного цикла по диагностике, Тюмень</title>
+<meta name="description" content="А2: автосервис полного цикла по диагностике в Тюмени, улица Республики, 143 к4. Ежедневно 9:00–20:00. Телефон +7-902-623-22-23.">
+<style>
+:root { --accent: #f2c230; --bg: #17150f; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.1); --text: #f2f2f2; --muted: #a3a7ad; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: 76px; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.logo { font-weight: 900; letter-spacing: -.01em; font-size: 18px; text-decoration: none; }
+.logo i { color: var(--accent); font-style: normal; }
+.top .phone-top { font-weight: 700; text-decoration: none; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 35%, var(--bg) 94%); }
+body.no-photo .hero { min-height: 72vh; background: radial-gradient(120% 90% at 85% 0%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 60%), repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 14px, transparent 14px 28px); }
+.hero .wrap { position: relative; z-index: 1; padding-top: 96px; padding-bottom: 48px; width: 100%; }
+.tag { display: inline-block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 12px; }
+h1 { font-size: clamp(44px, 10vw, 96px); line-height: .95; margin: 0 0 16px; font-weight: 900; letter-spacing: -.02em; }
+.lead { font-size: clamp(17px, 2.2vw, 20px); color: #e2e4e7; max-width: 640px; margin: 0 0 20px; }
+.rating { display: inline-flex; gap: 8px; align-items: center; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; margin-bottom: 24px; text-decoration: none; backdrop-filter: blur(6px); }
+.rating b { color: var(--accent); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 800; text-decoration: none; }
+.btn.ghost { background: rgba(0,0,0,.25); color: var(--text); border: 1px solid var(--line); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: -8px; position: relative; z-index: 1; }
+.stats div { background: var(--bg); padding: 20px 18px; }
+.stats b { display: block; font-size: clamp(24px, 4vw, 34px); line-height: 1.1; font-weight: 900; color: var(--accent); }
+.stats span { color: var(--muted); font-size: 14px; }
+section { padding: 72px 0 8px; }
+.kicker { color: var(--accent); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; margin: 0 0 8px; }
+h2 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 0 0 24px; letter-spacing: -.01em; }
+.why { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 999px; padding: 7px 14px; font-weight: 600; font-size: 15px; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.perks li { padding-left: 30px; position: relative; }
+.perks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #111; font-size: 12px; font-weight: 900; display: grid; place-items: center; margin-top: 2px; }
+.featured { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; position: relative; }
+.featured blockquote { margin: 0 0 14px; font-size: 18px; line-height: 1.5; }
+.featured::before { content: "“"; position: absolute; top: -18px; left: 20px; font-size: 80px; line-height: 1; color: var(--accent); font-family: Georgia, serif; }
+.services { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.services li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; }
+.services .num { color: var(--accent); font-weight: 900; font-size: 13px; letter-spacing: .05em; }
+.services h3 { font-size: 18px; margin: 4px 0 6px; line-height: 1.25; }
+.services p { margin: 0; color: var(--muted); font-size: 15px; }
+.services p.detail { color: var(--text); margin-bottom: 6px; }
+.price { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+.price p { margin: 0 0 14px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 12px; background: var(--accent); color: #111; font-weight: 900; display: grid; place-items: center; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 15px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; aspect-ratio: 656/340; object-fit: cover; border-radius: 12px; display: block; }
+.reviews { columns: 3 280px; column-gap: 14px; }
+.review { break-inside: avoid; margin: 0 0 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.review blockquote { margin: 0 0 12px; }
+.review figcaption, .featured figcaption, .muted { color: var(--muted); font-size: 14px; }
+.contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.contacts .phone { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--accent); }
+.map { width: 100%; aspect-ratio: 650/340; object-fit: cover; display: block; border-radius: 16px; filter: grayscale(.35); }
+.cta { margin-top: 72px; text-align: center; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 20px; padding: 40px 20px; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { color: #d9dbde; margin: 0 0 20px; }
+.cta .actions { justify-content: center; }
+.demo { margin: 48px 0 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; }
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(10,10,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+.callbar .btn { flex: 1; }
+@media (min-width: 821px) { .callbar { display: none; } body { padding-bottom: 0; } }
+@media (max-width: 820px) {
+  .contacts, .why, .price { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .top .phone-top { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <a class="logo" href="#">А2<i>.</i></a>
+  <a class="phone-top" href="tel:+79026232223">+7-902-623-22-23</a>
+</div></div>
+
+<header class="hero">
+  <img class="hero-img" src="https://i4.photo.2gis.com/photo-gallery/dbcba35f-9186-47bb-a8e6-13dcd086b23f_1920x1080.jpg" alt="" referrerpolicy="no-referrer" onerror="document.body.classList.add('no-photo');this.remove()">
+  <div class="wrap">
+    <span class="tag">автосервис полного цикла по диагностике · Тюмень</span>
+    <h1>А2</h1>
+    <p class="lead">улица Республики, 143 к4, Ленинский округ. Ежедневно 9:00–20:00.</p>
+    <a class="rating" href="https://2gis.ru/tyumen/firm/70000001040733379/tab/reviews" target="_blank" rel="noopener"><b>★ 5.0</b> 756 оценок в 2ГИС</a>
+    <div class="actions">
+      <a class="btn" href="tel:+79026232223">Позвонить +7-902-623-22-23</a>
+      <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.140733,65.566988" target="_blank" rel="noopener">Построить маршрут</a>
+      <a class="btn ghost" href="https://vk.com/club21061667" target="_blank" rel="noopener">ВКонтакте</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div><b>★ 5.0</b><span>средняя оценка в 2ГИС</span></div>
+    <div><b>756</b><span>оценок клиентов</span></div>
+    <div><b>20</b><span>направлений работ</span></div>
+    <div><b>Ежедневно 9–20</b><span>часы работы</span></div>
+  </div>
+
+  <section id="why">
+    <p class="kicker">Почему к нам едут</p>
+    <h2>Что отмечают клиенты</h2>
+    <div class="why">
+      <div>
+        <div class="chips"><span class="chip">Отличный сервис</span><span class="chip">Отличное место</span><span class="chip">Отличный автосервис</span><span class="chip">Быстро и качественно</span><span class="chip">Отзывчивый персонал</span><span class="chip">Сделали быстро</span></div>
+        <ul class="perks"><li>Возможна запись (шиномонтаж)</li><li>Wi-Fi для клиентов</li><li>Кафе</li><li>Отвечают на отзывы клиентов в 2ГИС</li><li>Оплата: карта, наличные, безналичный расчёт, перевод с карты, qr-код</li></ul>
+      </div>
+      <figure class="featured"><blockquote>«Не первый раз обращаюсь в этот автосервис. Всё было сделано максимально быстро и качественно, ничего лишнего не накручивают, все объясняют и показывают. Рекомендую!»</blockquote><figcaption>Алексей В. · 1 ноября 2026 · отзыв в 2ГИС</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="kicker">Услуги</p>
+    <h2>Чем можем помочь</h2>
+    <ul class="services"><li><span class="num">01</span><h3>Шиномонтаж</h3><p class="detail">Замена колодок, ошиповка шин</p><p>Сезонная смена шин и колёс, ремонт проколов.</p></li><li><span class="num">02</span><h3>Замена масла</h3><p class="detail">Аппаратная</p><p>Плановая замена масла по регламенту автомобиля.</p></li><li><span class="num">03</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок электронных систем — чтобы понять, почему горит Check Engine.</p></li><li><span class="num">04</span><h3>Развал-схождение</h3><p>Регулировка углов установки колёс — когда машину уводит в сторону или неровно стирается резина.</p></li><li><span class="num">05</span><h3>Сварочные работы</h3><p>Сварка металлических деталей автомобиля.</p></li><li><span class="num">06</span><h3>Ремонт электронных систем</h3><p>Проводка, датчики, блоки управления — неисправности, которые не видно глазом.</p></li><li><span class="num">07</span><h3>Ремонт ходовой части</h3><p class="detail">Ремонт пневмоподвески, ремонт стоек</p><p>Стуки и скрипы на неровностях, люфты, неровный ход — причина обычно в подвеске.</p></li><li><span class="num">08</span><h3>Ремонт стартеров и генераторов</h3><p>Машина плохо заводится или садится аккумулятор — часто дело в стартере или генераторе.</p></li><li><span class="num">09</span><h3>Ремонт рулевых реек</h3><p>Стук в руле, люфт, тяжёлый руль или подтекание рейки.</p></li><li><span class="num">10</span><h3>Ремонт дизельных двигателей</h3><p class="detail">Шлифовка, расточка, гильзовка, опрессовка</p><p>Неисправности дизеля: тяжёлый запуск, дым, потеря тяги, посторонние шумы.</p></li><li><span class="num">11</span><h3>Ремонт выхлопных систем</h3><p>Громкий выхлоп, запах выхлопных газов в салоне, прогоревший глушитель.</p></li><li><span class="num">12</span><h3>Ремонт бензиновых двигателей</h3><p>Поиск и устранение неисправностей двигателя: потеря мощности, посторонние шумы, повышенный расход.</p></li><li><span class="num">13</span><h3>Ремонт МКПП</h3><p>Хруст при переключении, тугие передачи, шум в коробке.</p></li><li><span class="num">14</span><h3>Отогрев автомобиля</h3><p>Когда машина не заводится на морозе.</p></li><li><span class="num">15</span><h3>Обслуживание кондиционеров</h3><p>Проверка и заправка кондиционера, чтобы в жару в салоне было прохладно.</p></li><li><span class="num">16</span><h3>Запчасти для иномарок</h3><p>Подбор запчастей для иномарок.</p></li><li><span class="num">17</span><h3>Автосигнализации</h3><p>Установка и обслуживание автосигнализаций.</p></li><li><span class="num">18</span><h3>Аккумуляторы</h3><p>Подбор, проверка и замена аккумулятора.</p></li><li><span class="num">19</span><h3>Ремонт АКПП</h3><p>Автоматическая коробка: рывки, пинки при переключении, пробуксовка.</p></li><li><span class="num">20</span><h3>Ремонт инжекторов</h3><p>Чистка и проверка форсунок — когда двигатель троит, растёт расход или падает мощность.</p></li></ul>
+  </section>
+
+  <section id="price">
+    <p class="kicker">Стоимость и запись</p>
+    <h2>Как записаться</h2>
+    <div class="price">
+      <div>
+        
+        <p>Стоимость зависит от автомобиля и объёма работ — назовём по телефону.</p>
+        <a class="btn" href="tel:+79026232223">Узнать стоимость</a>
+      </div>
+      <ol class="steps">
+        <li><div><b>Позвоните или напишите в ВКонтакте</b><span>+7-902-623-22-23</span></div></li>
+        <li><div><b>Расскажите, что с машиной</b><span>Марка, модель и что беспокоит — так проще сориентировать по работам.</span></div></li>
+        <li><div><b>Приезжайте</b><span>улица Республики, 143 к4. Ежедневно 9:00–20:00.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="photos"><p class="kicker">Фото</p><h2>Как у нас</h2><div class="gallery"><img src="https://i3.photo.2gis.com/photo-gallery/49d6c1d2-8f9c-4e97-a42e-bd1526a8c002_1280x.jpg" alt="А2" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i5.photo.2gis.com/photo-gallery/da25078d-3b5c-4a66-9c50-bd62582e8eb3_1280x.jpg" alt="А2" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i9.photo.2gis.com/photo-gallery/9eaa1602-560e-412b-9bff-024513bfcaa7_1280x.jpg" alt="А2" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i7.photo.2gis.com/photo-gallery/0fb06d28-f3e3-4bc2-b7e5-90d02c29cc1c_1280x.jpg" alt="А2" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><img src="https://i0.photo.2gis.com/photo-gallery/a66f017d-0f30-493d-816d-a8f72fcadab5_1280x.jpg" alt="А2" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div></section>
+
+  <section id="reviews">
+    <p class="kicker">Отзывы</p>
+    <h2>Что пишут в 2ГИС</h2>
+    <div class="reviews"><figure class="review"><blockquote>«Не первый раз посещаю данный сервис. Ребята с большим опытом решили не стандартный вопрос с щелчками в подвеске на Tesla model S. На предыдущих двух сервисах проблему найти не смогли, а тут практически сразу вычислили причину! Рекомендую данный сервис!»</blockquote><figcaption>Михаил Б. · 25 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Суперски клиентоориентированы сотрудники!
+Бесплатная подкачка порадовала с самого утра)»</blockquote><figcaption>Дима Б. · 20 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Хороший сервис и грамотные специалисты! Быстро нашли проблему в автомобиле, нашли как ее исправить с меньшими затратами. Сделали все достаточно быстро. Нареканий нет, однозначно рекомендую.»</blockquote><figcaption>Ангелина И. · 14 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Впервые приехала на это СТО. Провели инспекционный сервис, выявили неисправности, все устранили, дали рекомендации. Все четко по оговоренной цене. Рекомендую. Спасибо!»</blockquote><figcaption>Надежда Р. · 6 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Отличный сервис,приехал с одной проблемой,думал все настолько плохо(в другом сервисе сказали так),а так ребята выяснили настоящую проблему и устранили ее в кратчайшие сроки,респект»</blockquote><figcaption>sdndbfnd B. · 5 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Впервые приехала на СТО, проблему выявили быстро, деталь была в наличии на складе.
+Ее оперативно доставили и установили.
+Очень благодарна за качественный сервис и высокий уровень обслуживания.»</blockquote><figcaption>Наталья Т. · 3 октября 2026 · отзыв в 2ГИС</figcaption></figure><figure class="review"><blockquote>«Заехала перед самым закрытием с пробитым колесом. Очень быстро помогли и спасли меня) 
+Спасибо ❤️
+Точно рекомендую! Быстро, качественно и клиентоориентированно)»</blockquote><figcaption>Виктория П. · 19 сентября 2026 · отзыв в 2ГИС</figcaption></figure></div>
+    <p class="muted" style="margin-top:4px">Все отзывы — <a href="https://2gis.ru/tyumen/firm/70000001040733379/tab/reviews" target="_blank" rel="noopener">в 2ГИС</a>.</p>
+  </section>
+
+  <section id="contacts">
+    <p class="kicker">Контакты</p>
+    <h2>Как нас найти</h2>
+    <div class="contacts">
+      <div>
+        <p><b>улица Республики, 143 к4</b>, Ленинский округ, Тюмень</p>
+        <p>Ежедневно 9:00–20:00</p>
+        
+        <p><a class="phone" href="tel:+79026232223">+7-902-623-22-23</a><br></p>
+        <div class="actions">
+          <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.140733,65.566988" target="_blank" rel="noopener">Построить маршрут</a>
+          <a class="btn ghost" href="https://vk.com/club21061667" target="_blank" rel="noopener">ВКонтакте</a>
+        </div>
+      </div>
+      <a href="https://yandex.ru/maps/?pt=65.566988,57.140733&amp;z=17&amp;l=map" target="_blank" rel="noopener"><img class="map" loading="lazy" alt="А2 на карте" src="https://static-maps.yandex.ru/1.x/?ll=65.566988,57.140733&amp;z=16&amp;size=650,340&amp;l=map&amp;pt=65.566988,57.140733,pm2rdl"></a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Нужен ремонт или шиномонтаж?</h2>
+    <p>Позвоните — подскажем, когда удобнее подъехать.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+79026232223">Позвонить +7-902-623-22-23</a>
+      <a class="btn ghost" href="https://vk.com/club21061667" target="_blank" rel="noopener">ВКонтакте</a>
+    </div>
+  </div>
+
+  <p class="demo">Демо-концепт сайта для «А2». Подготовлен как предложение и не является официальным сайтом компании.
+  Данные, отзывы и фото — из открытой карточки организации в 2ГИС. Удалим по первой просьбе.</p>
+</main>
+
+<nav class="callbar">
+  <a class="btn" href="tel:+79026232223">Позвонить</a>
+  <a class="btn ghost" href="https://yandex.ru/maps/?rtext=~57.140733,65.566988" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+</body>
+</html>
